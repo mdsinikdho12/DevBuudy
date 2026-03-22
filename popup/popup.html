@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBuddy</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="home-screen">
+      <div class="header">
+        <span class="title">DevBuddy</span>
+        <span class="version">v1.0</span>
+      </div>
+      <div class="grid">
+        <div class="icon-btn" id="btn-sites">
+          <div class="icon" style="background: rgba(99, 102, 241, 0.25)">
+            🔖
+          </div>
+          <span class="icon-label">সেভ সাইট</span>
+        </div>
+        <div class="icon-btn" id="btn-color">
+          <div class="icon" style="background: rgba(236, 72, 153, 0.2)">🎨</div>
+          <span class="icon-label">Color</span>
+        </div>
+        <div class="icon-btn" id="btn-pass">
+          <div class="icon" style="background: rgba(16, 185, 129, 0.2)">🔑</div>
+          <span class="icon-label">Password</span>
+        </div>
+        <div class="icon-btn" id="btn-json">
+          <div class="icon" style="background: rgba(245, 158, 11, 0.2)">
+            { }
+          </div>
+          <span class="icon-label">JSON</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="sites-screen" class="screen hidden">
+      <div class="header">
+        <button class="back-btn" id="back-sites">← Back</button>
+        <span class="title">সেভ করা সাইট</span>
+      </div>
+      <ul id="site-list"></ul>
+    </div>
+
+    <div id="color-screen" class="screen hidden">
+      <div class="header">
+        <button class="back-btn" id="back-color">← Back</button>
+        <span class="title">Color Picker</span>
+      </div>
+      <p class="coming-soon">Coming Soon...</p>
+    </div>
+
+    <div id="pass-screen" class="screen hidden">
+      <div class="header">
+        <button class="back-btn" id="back-pass">← Back</button>
+        <span class="title">Password Generator</span>
+      </div>
+
+      <!-- Generated Password দেখানোর জায়গা -->
+      <div class="pass-output" id="pass-output">
+        আপনার password এখানে দেখাবে
+      </div>
+
+      <!-- Length Input -->
+      <div class="pass-row">
+        <span class="pass-label">দৈর্ঘ্য</span>
+        <input
+          class="input-number"
+          id="pass-length"
+          type="number"
+          value="12"
+          min="6"
+          max="32" />
+      </div>
+
+      <!-- Options -->
+      <div class="pass-row">
+        <span class="pass-label">বড় হাতের অক্ষর A-Z</span>
+        <input type="checkbox" id="opt-upper" checked />
+      </div>
+      <div class="pass-row">
+        <span class="pass-label">ছোট হাতের অক্ষর a-z</span>
+        <input type="checkbox" id="opt-lower" checked />
+      </div>
+      <div class="pass-row">
+        <span class="pass-label">সংখ্যা 0-9</span>
+        <input type="checkbox" id="opt-number" checked />
+      </div>
+      <div class="pass-row">
+        <span class="pass-label">চিহ্ন !@#$%</span>
+        <input type="checkbox" id="opt-symbol" />
+      </div>
+
+      <!-- Buttons -->
+      <button class="pass-btn" id="btn-generate">Generate</button>
+      <button class="pass-btn secondary" id="btn-copy">Copy</button>
+    </div>
+
+    <div id="json-screen" class="screen hidden">
+      <div class="header">
+        <button class="back-btn" id="back-json">← Back</button>
+        <span class="title">JSON Formatter</span>
+      </div>
+      <p class="coming-soon">Coming Soon...</p>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
