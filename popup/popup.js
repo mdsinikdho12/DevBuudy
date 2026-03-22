@@ -30,7 +30,6 @@ document
   .getElementById("back-pass")
   .addEventListener("click", () => showScreen("home-screen"));
 
-// load save site from chrome storage
 function loadSites() {
   const siteList = document.getElementById("site-list");
 
@@ -45,19 +44,26 @@ function loadSites() {
     siteList.innerHTML = "";
 
     sites.forEach((site, index) => {
+      const domain = new URL(site.url).hostname;
+
+      // Google favicon API
+      const favicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
+
       const li = document.createElement("li");
       li.innerHTML = `
+        <img src="${favicon}" width="16" height="16"
+          style="border-radius:4px;flex-shrink:0;"
+          onerror="this.style.display='none'"
+        />
         <a href="${site.url}" target="_blank">${site.title}</a>
         <button class="delete-btn" data-index="${index}">✕</button>
       `;
       siteList.appendChild(li);
     });
 
-    // Delete button click
     document.querySelectorAll(".delete-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const index = e.target.dataset.index;
-
         chrome.storage.local.get("sites", (result) => {
           const sites = result.sites || [];
           sites.splice(index, 1);
@@ -213,4 +219,23 @@ document.getElementById("btn-send").addEventListener("click", async () => {
     statusEl.classList.add("error");
     responseEl.textContent = error.message;
   }
+});
+
+// json
+
+document
+  .getElementById("btn-json")
+  .addEventListener("click", () => showScreen("json-screen"));
+
+document
+  .getElementById("back-json")
+  .addEventListener("click", () => showScreen("home-screen"));
+
+const JsonBtn = document.getElementById("btn-format-json");
+
+JsonBtn.addEventListener("click", () => {
+  const RowJson = document.getElementById("json-input").value.trim();
+  const ParsedJson = JSON.parse(RowJson);
+  const output = document.getElementById("json-output");
+  output.textContent = JSON.stringify(ParsedJson, null, 2);
 });
