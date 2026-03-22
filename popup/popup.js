@@ -50,14 +50,31 @@ function loadSites() {
 
     siteList.innerHTML = "";
 
-    sites.forEach((site) => {
+    sites.forEach((site, index) => {
       const li = document.createElement("li");
-      li.innerHTML = `<a href="${site.url}" target="_blank">${site.title}</a>`;
+      li.innerHTML = `
+        <a href="${site.url}" target="_blank">${site.title}</a>
+        <button class="delete-btn" data-index="${index}">✕</button>
+      `;
       siteList.appendChild(li);
+    });
+
+    // Delete button click
+    document.querySelectorAll(".delete-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const index = e.target.dataset.index;
+
+        chrome.storage.local.get("sites", (result) => {
+          const sites = result.sites || [];
+          sites.splice(index, 1);
+          chrome.storage.local.set({ sites }, () => {
+            loadSites();
+          });
+        });
+      });
     });
   });
 }
-
 // generate btn
 
 document.getElementById("btn-generate").addEventListener("click", () => {
