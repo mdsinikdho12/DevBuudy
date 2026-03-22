@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   padding: 24px 18px;
   border-radius: 0;
-  background:
+  /* background:
     radial-gradient(
       ellipse at 20% 20%,
       rgba(102, 126, 234, 0.55) 0%,
@@ -34,7 +34,9 @@ body {
       rgba(59, 130, 246, 0.35) 0%,
       transparent 40%
     ),
-    #080812;
+    #080812; */
+
+  background: #121214;
 }
 
 /* ── Header ── */
@@ -318,4 +320,188 @@ input[type="checkbox"] {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.85);
   font-family: monospace;
+}
+/* ── Settings ── */
+.settings-section-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.shortcut-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+}
+
+.shortcut-keys {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.key {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: monospace;
+}
+
+.key-plus {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.shortcut-link {
+  display: block;
+  font-size: 12px;
+  color: rgba(108, 99, 255, 0.9);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.shortcut-link:hover {
+  color: rgba(168, 85, 247, 1);
+}
+/* ── Grid 3 column ── */
+.grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* ── API Row ── */
+.api-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.method-select {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  padding: 6px 8px;
+  outline: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.api-url-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.api-url-input:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.api-textarea {
+  width: 100%;
+  height: 80px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 12px;
+  font-family: monospace;
+  outline: none;
+  resize: none;
+  margin-bottom: 8px;
+  transition: border-color 0.2s;
+}
+
+.api-textarea:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Response Box ── */
+.api-response {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  font-family: monospace;
+  margin-top: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+/* ── API Status ── */
+.api-status {
+  font-size: 11px;
+  font-family: monospace;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.api-status.ok {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+}
+
+.api-status.error {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+}
+
+/* ── Storage List ── */
+.storage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.storage-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.storage-key {
+  font-size: 11px;
+  color: rgba(99, 102, 241, 0.9);
+  font-family: monospace;
+  margin-bottom: 2px;
+}
+
+.storage-value {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

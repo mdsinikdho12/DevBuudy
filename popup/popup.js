@@ -19,9 +19,6 @@ document
 document
   .getElementById("btn-pass")
   .addEventListener("click", () => showScreen("pass-screen"));
-document
-  .getElementById("btn-json")
-  .addEventListener("click", () => showScreen("json-screen"));
 
 document
   .getElementById("back-sites")
@@ -31,9 +28,6 @@ document
   .addEventListener("click", () => showScreen("home-screen"));
 document
   .getElementById("back-pass")
-  .addEventListener("click", () => showScreen("home-screen"));
-document
-  .getElementById("back-json")
   .addEventListener("click", () => showScreen("home-screen"));
 
 // load save site from chrome storage
@@ -147,4 +141,26 @@ document.getElementById("btn-copy-color").addEventListener("click", () => {
     btn.textContent = "Copied!";
     setTimeout(() => (btn.textContent = "Copy HEX"), 2000);
   });
+});
+
+// Settings screen
+document
+  .getElementById("btn-settings")
+  .addEventListener("click", () => showScreen("settings-screen"));
+document
+  .getElementById("back-settings")
+  .addEventListener("click", () => showScreen("home-screen"));
+
+document.getElementById("btn-change-shortcut").addEventListener("click", () => {
+  chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
+});
+
+// Save button toggle
+chrome.storage.local.get("showSaveBtn", (result) => {
+  const show = result.showSaveBtn !== false;
+  document.getElementById("toggle-save-btn").checked = show;
+});
+
+document.getElementById("toggle-save-btn").addEventListener("change", (e) => {
+  chrome.storage.local.set({ showSaveBtn: e.target.checked });
 });
