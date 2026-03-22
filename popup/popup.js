@@ -164,3 +164,53 @@ chrome.storage.local.get("showSaveBtn", (result) => {
 document.getElementById("toggle-save-btn").addEventListener("change", (e) => {
   chrome.storage.local.set({ showSaveBtn: e.target.checked });
 });
+
+// API TESTER
+
+document
+  .getElementById("btn-api")
+  .addEventListener("click", () => showScreen("api-screen"));
+document
+  .getElementById("back-api")
+  .addEventListener("click", () => showScreen("home-screen"));
+
+document.getElementById("btn-send").addEventListener("click", async () => {
+  const method = document.getElementById("api-method").value;
+  const url = document.getElementById("api-url").value.trim();
+  const body = document.getElementById("api-body").value.trim();
+  const statusEl = document.getElementById("api-status");
+  const responseEl = document.getElementById("api-response");
+  if (!url) {
+    responseEl.textContent = "URL দিন!🙄";
+    return;
+  }
+  responseEl.textContent = "Loading.....";
+  statusEl.textContent = "";
+  statusEl.className = "api-status";
+
+  try {
+    const options = { method };
+
+    if ((method === "POST" || method === "PUT") && body) {
+      options.headers = { "content-Type": "application/json" };
+      options.body = body;
+    }
+
+    const res = await fetch(url, options);
+    const text = await res.text();
+
+    statusEl.textContent = `${res.status} ${res.statusText}`;
+    statusEl.classList.add(res.ok ? "ok" : "error");
+
+    try {
+      const json = JSON.parse(text);
+      responseEl.textContent = JSON.stringify(json, null, 2);
+    } catch {
+      responseEl.textContent = text;
+    }
+  } catch (error) {
+    statusEl.textContent = "Error";
+    statusEl.classList.add("error");
+    responseEl.textContent = error.message;
+  }
+});
