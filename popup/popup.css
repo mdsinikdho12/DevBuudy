@@ -7,22 +7,34 @@
 }
 
 body {
-  width: 300px;
-  min-height: 300px;
-  padding: 18px 16px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
   font-family: "Hind Siliguri", sans-serif;
-  background: #0a0a14;
-  background-image:
+}
+
+.wrapper {
+  width: 100%; /* side panel পুরো width নেবে */
+  min-height: 100vh; /* পুরো height */
+  padding: 24px 18px;
+  border-radius: 0;
+  background:
     radial-gradient(
-      ellipse at top left,
-      rgba(102, 126, 234, 0.25) 0%,
-      transparent 55%
+      ellipse at 20% 20%,
+      rgba(102, 126, 234, 0.55) 0%,
+      transparent 50%
     ),
     radial-gradient(
-      ellipse at bottom right,
-      rgba(118, 75, 162, 0.15) 0%,
-      transparent 55%
-    );
+      ellipse at 80% 80%,
+      rgba(168, 85, 247, 0.45) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 60% 10%,
+      rgba(59, 130, 246, 0.35) 0%,
+      transparent 40%
+    ),
+    #080812;
 }
 
 /* ── Header ── */
@@ -67,15 +79,25 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
   transition:
     transform 0.15s,
-    border-color 0.15s;
+    border-color 0.15s,
+    box-shadow 0.15s;
 }
 
 .icon-btn:hover .icon {
   transform: scale(1.08);
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .icon-label {
@@ -95,7 +117,9 @@ body {
 /* ── Back Button ── */
 .back-btn {
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
   padding: 4px 10px;
@@ -106,7 +130,7 @@ body {
 }
 
 .back-btn:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* ── Site List ── */
@@ -118,15 +142,18 @@ body {
 }
 
 #site-list li {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 9px 12px;
   transition: background 0.2s;
 }
 
 #site-list li:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 #site-list a {
@@ -147,32 +174,14 @@ body {
   text-align: center;
   margin-top: 30px;
 }
-.input-number {
-  width: 100%;
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  color: white;
-  font-family: "Hind Siliguri", sans-serif;
-  font-size: 14px;
-  outline: none;
-  box-sizing: border-box;
-}
 
-.input-number::placeholder {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.input-number:focus {
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.12);
-}
 /* ── Password Output ── */
 .pass-output {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 12px 14px;
   color: rgba(255, 255, 255, 0.9);
@@ -184,7 +193,7 @@ body {
   align-items: center;
 }
 
-/* ── Row (label + input) ── */
+/* ── Pass Row ── */
 .pass-row {
   display: flex;
   align-items: center;
@@ -205,10 +214,20 @@ body {
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   color: white;
   font-size: 13px;
   text-align: center;
   outline: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.input-number:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* ── Checkbox ── */
@@ -224,34 +243,52 @@ input[type="checkbox"] {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  border: none;
   font-size: 13px;
   font-family: "Hind Siliguri", sans-serif;
   cursor: pointer;
   margin-top: 10px;
-  transition: opacity 0.2s;
+  transition:
+    opacity 0.2s,
+    transform 0.15s;
 }
 
 .pass-btn:hover {
   opacity: 0.85;
+  transform: translateY(-1px);
 }
 
 .pass-btn:not(.secondary) {
-  background: linear-gradient(135deg, #6c63ff, #a855f7);
+  background: linear-gradient(
+    135deg,
+    rgba(108, 99, 255, 0.8),
+    rgba(168, 85, 247, 0.8)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
   color: white;
 }
 
 .pass-btn.secondary {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.7);
 }
+
+/* ── Color Preview ── */
 .color-preview {
   width: 100%;
   height: 80px;
   border-radius: 10px;
-  background: #1a1a2e;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-bottom: 14px;
   transition: background 0.3s;
 }
