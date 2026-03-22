@@ -1,3 +1,4 @@
+// show Screen icon
 function showScreen(id) {
   document.querySelectorAll("#home-screen, .screen").forEach((el) => {
     el.classList.add("hidden");
@@ -8,7 +9,7 @@ function showScreen(id) {
     loadSites();
   }
 }
-
+// add evenListerner for hide or show
 document
   .getElementById("btn-sites")
   .addEventListener("click", () => showScreen("sites-screen"));
@@ -35,6 +36,7 @@ document
   .getElementById("back-json")
   .addEventListener("click", () => showScreen("home-screen"));
 
+// load save site from chrome storage
 function loadSites() {
   const siteList = document.getElementById("site-list");
 
@@ -92,5 +94,40 @@ document.getElementById("btn-copy").addEventListener("click", () => {
     const btn = document.getElementById("btn-copy");
     btn.textContent = "Copied!";
     setTimeout(() => (btn.textContent = "Copy"), 2000);
+  });
+});
+
+// color picker
+
+document
+  .getElementById("btn-eyedropper")
+  .addEventListener("click", async () => {
+    const eyedropper = new EyeDropper();
+
+    try {
+      const result = await eyedropper.open();
+      const hex = result.sRGBHex;
+
+      //   convert hex to rgb
+      const r = parseInt(hex.slice(1, 3), 16);
+      const g = parseInt(hex.slice(3, 5), 16);
+      const b = parseInt(hex.slice(5, 7), 16);
+
+      // update ui
+      document.getElementById("color-preview").style.background = hex;
+      document.getElementById("hex-value").textContent = hex;
+      document.getElementById("rgb-value").textContent = `rgb(${r},${g},${b})`;
+    } catch (error) {}
+  });
+
+// copy hex
+
+document.getElementById("btn-copy-color").addEventListener("click", () => {
+  const Hex = document.getElementById("hex-value").textContent;
+
+  navigator.clipboard.writeText(Hex).then(() => {
+    const btn = document.getElementById("btn-copy-color");
+    btn.textContent = "Copied!";
+    setTimeout(() => (btn.textContent = "Copy HEX"), 2000);
   });
 });

@@ -17,7 +17,7 @@
           <div class="icon" style="background: rgba(99, 102, 241, 0.25)">
             🔖
           </div>
-          <span class="icon-label">সেভ সাইট</span>
+          <span class="icon-label">Save Sites</span>
         </div>
         <div class="icon-btn" id="btn-color">
           <div class="icon" style="background: rgba(236, 72, 153, 0.2)">🎨</div>
@@ -43,22 +43,36 @@
       </div>
       <ul id="site-list"></ul>
     </div>
-
+    <!-- color  -->
     <div id="color-screen" class="screen hidden">
       <div class="header">
         <button class="back-btn" id="back-color">← Back</button>
         <span class="title">Color Picker</span>
       </div>
-      <p class="coming-soon">Coming Soon...</p>
+      <div id="color-preview" class="color-preview"></div>
+
+      <div class="pass-row">
+        <span class="pass-label">HEX</span>
+        <span id="hex-value">#000000</span>
+      </div>
+
+      <div class="pass-row">
+        <span class="pass-label">RGB</span>
+        <span id="rgb-value">rgb(0, 0, 0)</span>
+      </div>
+
+      <button class="pass-btn" id="btn-eyedropper">Pick Color</button>
+      <button class="pass-btn secondary" id="btn-copy-color">Copy HEX</button>
     </div>
 
+    <!-- password  -->
     <div id="pass-screen" class="screen hidden">
       <div class="header">
         <button class="back-btn" id="back-pass">← Back</button>
         <span class="title">Password Generator</span>
       </div>
 
-      <!-- Generated Password দেখানোর জায়গা -->
+      <!-- Generated Password -->
       <div class="pass-output" id="pass-output">
         আপনার password এখানে দেখাবে
       </div>
