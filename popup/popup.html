@@ -8,12 +8,14 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- Home Screen -->
       <div id="home-screen">
         <div class="header">
           <span class="title">DevBuddy</span>
           <span class="version">v1.0</span>
         </div>
+
+        <!-- Group 1: Tools -->
+        <div class="section-label">🛠 Tools</div>
         <div class="grid">
           <div class="icon-btn" id="btn-sites">
             <div
@@ -21,303 +23,121 @@
               style="
                 background: rgba(99, 102, 241, 0.25);
                 border-color: rgba(99, 102, 241, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(99,102,241,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
-              </svg>
-            </div>
+              "></div>
             <span class="icon-label">Save Sites</span>
           </div>
-
           <div class="icon-btn" id="btn-color">
             <div
               class="icon"
               style="
                 background: rgba(236, 72, 153, 0.2);
                 border-color: rgba(236, 72, 153, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(236,72,153,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
-                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
-                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
-                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
-                <path
-                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
-              </svg>
-            </div>
+              "></div>
             <span class="icon-label">Color</span>
           </div>
-
           <div class="icon-btn" id="btn-pass">
             <div
               class="icon"
               style="
                 background: rgba(16, 185, 129, 0.2);
                 border-color: rgba(16, 185, 129, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(16,185,129,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
-            </div>
+              "></div>
             <span class="icon-label">Password</span>
           </div>
-
-          <div class="icon-btn" id="btn-api">
-            <div
-              class="icon"
-              style="
-                background: rgba(245, 158, 11, 0.2);
-                border-color: rgba(245, 158, 11, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(245,158,11,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M18 20V10" />
-                <path d="M12 20V4" />
-                <path d="M6 20v-6" />
-              </svg>
-            </div>
-            <span class="icon-label">API Tester</span>
-          </div>
-
-          <div class="icon-btn" id="btn-json">
-            <div
-              class="icon"
-              style="
-                background: rgba(59, 130, 246, 0.2);
-                border-color: rgba(59, 130, 246, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(59,130,246,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6" />
-                <polyline points="8 6 2 12 8 18" />
-              </svg>
-            </div>
-            <span class="icon-label">JSON</span>
-          </div>
-
-          <div class="icon-btn" id="btn-base64">
-            <div
-              class="icon"
-              style="
-                background: rgba(168, 85, 247, 0.2);
-                border-color: rgba(168, 85, 247, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(168,85,247,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="m18 16 4-4-4-4" />
-                <path d="m6 8-4 4 4 4" />
-                <path d="m14.5 4-5 16" />
-              </svg>
-            </div>
-            <span class="icon-label">Base64</span>
-          </div>
-
-          <div class="icon-btn" id="btn-regex">
-            <div
-              class="icon"
-              style="
-                background: rgba(239, 68, 68, 0.2);
-                border-color: rgba(239, 68, 68, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(239,68,68,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.3-4.3" />
-              </svg>
-            </div>
-            <span class="icon-label">Regex</span>
-          </div>
-
-          <div class="icon-btn" id="btn-jwt">
-            <div
-              class="icon"
-              style="
-                background: rgba(20, 184, 166, 0.2);
-                border-color: rgba(20, 184, 166, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(20,184,166,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <rect width="18" height="18" x="3" y="3" rx="2" />
-                <path d="M3 9h18" />
-                <path d="M9 21V9" />
-              </svg>
-            </div>
-            <span class="icon-label">JWT</span>
-          </div>
-
-          <div class="icon-btn" id="btn-storage">
-            <div
-              class="icon"
-              style="
-                background: rgba(251, 146, 60, 0.2);
-                border-color: rgba(251, 146, 60, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(251,146,60,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <ellipse cx="12" cy="5" rx="9" ry="3" />
-                <path d="M3 5V19A9 3 0 0 0 21 19V5" />
-                <path d="M3 12A9 3 0 0 0 21 12" />
-              </svg>
-            </div>
-            <span class="icon-label">Storage</span>
-          </div>
-
           <div class="icon-btn" id="btn-timestamp">
             <div
               class="icon"
               style="
                 background: rgba(34, 197, 94, 0.2);
                 border-color: rgba(34, 197, 94, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(34,197,94,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-            </div>
+              "></div>
             <span class="icon-label">Timestamp</span>
           </div>
-
           <div class="icon-btn" id="btn-css">
             <div
               class="icon"
               style="
                 background: rgba(14, 165, 233, 0.2);
                 border-color: rgba(14, 165, 233, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(14,165,233,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M21 3 3 21" />
-                <path d="M21 21 3 3" />
-              </svg>
-            </div>
+              "></div>
             <span class="icon-label">CSS Unit</span>
           </div>
-
           <div class="icon-btn" id="btn-settings">
             <div
               class="icon"
               style="
                 background: rgba(156, 163, 175, 0.2);
                 border-color: rgba(156, 163, 175, 0.3);
-              ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="rgba(156,163,175,0.9)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-                <path
-                  d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
-                <circle cx="12" cy="12" r="3" />
-              </svg>
-            </div>
+              "></div>
             <span class="icon-label">Settings</span>
           </div>
         </div>
-      </div>
 
+        <!-- Group 2: Dev Tools -->
+        <div class="section-label" style="margin-top: 16px">⚡ Dev Tools</div>
+        <div class="grid">
+          <div class="icon-btn" id="btn-api">
+            <div
+              class="icon"
+              style="
+                background: rgba(245, 158, 11, 0.2);
+                border-color: rgba(245, 158, 11, 0.3);
+              "></div>
+            <span class="icon-label">API Tester</span>
+          </div>
+          <div class="icon-btn" id="btn-json">
+            <div
+              class="icon"
+              style="
+                background: rgba(59, 130, 246, 0.2);
+                border-color: rgba(59, 130, 246, 0.3);
+              "></div>
+            <span class="icon-label">JSON</span>
+          </div>
+          <div class="icon-btn" id="btn-base64">
+            <div
+              class="icon"
+              style="
+                background: rgba(168, 85, 247, 0.2);
+                border-color: rgba(168, 85, 247, 0.3);
+              "></div>
+            <span class="icon-label">Base64</span>
+          </div>
+          <div class="icon-btn" id="btn-regex">
+            <div
+              class="icon"
+              style="
+                background: rgba(239, 68, 68, 0.2);
+                border-color: rgba(239, 68, 68, 0.3);
+              "></div>
+            <span class="icon-label">Regex</span>
+          </div>
+          <div class="icon-btn" id="btn-jwt">
+            <div
+              class="icon"
+              style="
+                background: rgba(20, 184, 166, 0.2);
+                border-color: rgba(20, 184, 166, 0.3);
+              "></div>
+            <span class="icon-label">JWT</span>
+          </div>
+          <div class="icon-btn" id="btn-storage">
+            <div
+              class="icon"
+              style="
+                background: rgba(251, 146, 60, 0.2);
+                border-color: rgba(251, 146, 60, 0.3);
+              "></div>
+            <span class="icon-label">Storage</span>
+          </div>
+        </div>
+
+       
       <!-- Saved Sites Screen -->
       <div id="sites-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-sites">← Back</button>
-          <span class="title">Save Sites</span>
+          <button class="back-btn" id="back-sites">← Back</button
+          ><span class="title">Save Sites</span>
         </div>
         <ul id="site-list"></ul>
       </div>
@@ -325,8 +145,8 @@
       <!-- Color Screen -->
       <div id="color-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-color">← Back</button>
-          <span class="title">Color Picker</span>
+          <button class="back-btn" id="back-color">← Back</button
+          ><span class="title">Color Picker</span>
         </div>
         <div id="color-preview" class="color-preview"></div>
         <div class="pass-row">
@@ -343,8 +163,8 @@
       <!-- Password Screen -->
       <div id="pass-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-pass">← Back</button>
-          <span class="title">Password Generator</span>
+          <button class="back-btn" id="back-pass">← Back</button
+          ><span class="title">Password Generator</span>
         </div>
         <div class="pass-output" id="pass-output">
           আপনার password এখানে দেখাবে
@@ -382,8 +202,8 @@
       <!-- API Tester Screen -->
       <div id="api-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-api">← Back</button>
-          <span class="title">API Tester</span>
+          <button class="back-btn" id="back-api">← Back</button
+          ><span class="title">API Tester</span>
         </div>
         <div class="api-row">
           <select class="method-select" id="api-method">
@@ -409,11 +229,11 @@ Response এখানে দেখাবে...</pre
         >
       </div>
 
-      <!-- JSON Formatter Screen -->
+      <!-- JSON Screen -->
       <div id="json-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-json">← Back</button>
-          <span class="title">JSON Formatter</span>
+          <button class="back-btn" id="back-json">← Back</button
+          ><span class="title">JSON Formatter</span>
         </div>
         <textarea
           class="api-textarea"
@@ -427,8 +247,8 @@ Response এখানে দেখাবে...</pre
       <!-- Base64 Screen -->
       <div id="base64-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-base64">← Back</button>
-          <span class="title">Base64</span>
+          <button class="back-btn" id="back-base64">← Back</button
+          ><span class="title">Base64</span>
         </div>
         <textarea
           class="api-textarea"
@@ -444,8 +264,8 @@ Output এখানে দেখাবে...</pre
       <!-- Regex Screen -->
       <div id="regex-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-regex">← Back</button>
-          <span class="title">Regex Tester</span>
+          <button class="back-btn" id="back-regex">← Back</button
+          ><span class="title">Regex Tester</span>
         </div>
         <input
           class="api-url-input"
@@ -464,8 +284,8 @@ Output এখানে দেখাবে...</pre
       <!-- JWT Screen -->
       <div id="jwt-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-jwt">← Back</button>
-          <span class="title">JWT Decoder</span>
+          <button class="back-btn" id="back-jwt">← Back</button
+          ><span class="title">JWT Decoder</span>
         </div>
         <textarea
           class="api-textarea"
@@ -475,11 +295,11 @@ Output এখানে দেখাবে...</pre
         <pre class="api-response" id="jwt-output">Output এখানে দেখাবে...</pre>
       </div>
 
-      <!-- Local Storage Screen -->
+      <!-- Storage Screen -->
       <div id="storage-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-storage">← Back</button>
-          <span class="title">Local Storage</span>
+          <button class="back-btn" id="back-storage">← Back</button
+          ><span class="title">Local Storage</span>
         </div>
         <button class="pass-btn" id="btn-load-storage">Load Storage</button>
         <div id="storage-list" class="storage-list"></div>
@@ -488,8 +308,8 @@ Output এখানে দেখাবে...</pre
       <!-- Timestamp Screen -->
       <div id="timestamp-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-timestamp">← Back</button>
-          <span class="title">Timestamp</span>
+          <button class="back-btn" id="back-timestamp">← Back</button
+          ><span class="title">Timestamp</span>
         </div>
         <div class="pass-row">
           <span class="pass-label">এখনের সময়</span
@@ -514,12 +334,16 @@ Output এখানে দেখাবে...</pre
       <!-- CSS Unit Screen -->
       <div id="css-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-css">← Back</button>
-          <span class="title">CSS Unit Converter</span>
+          <button class="back-btn" id="back-css">← Back</button
+          ><span class="title">CSS Unit Converter</span>
         </div>
         <div class="pass-row">
-          <span class="pass-label">Base font size (px)</span>
-          <input class="input-number" id="base-font" type="number" value="16" />
+          <span class="pass-label">Base font (px)</span
+          ><input
+            class="input-number"
+            id="base-font"
+            type="number"
+            value="16" />
         </div>
         <input
           class="api-url-input"
@@ -528,16 +352,16 @@ Output এখানে দেখাবে...</pre
           placeholder="Value লিখুন..."
           style="margin: 10px 0" />
         <div class="pass-row">
-          <span class="pass-label">From</span>
-          <select class="method-select" id="css-from">
+          <span class="pass-label">From</span
+          ><select class="method-select" id="css-from">
             <option>px</option>
             <option>rem</option>
             <option>em</option>
           </select>
         </div>
         <div class="pass-row">
-          <span class="pass-label">To</span>
-          <select class="method-select" id="css-to">
+          <span class="pass-label">To</span
+          ><select class="method-select" id="css-to">
             <option>rem</option>
             <option>px</option>
             <option>em</option>
@@ -550,8 +374,8 @@ Output এখানে দেখাবে...</pre
       <!-- Settings Screen -->
       <div id="settings-screen" class="screen hidden">
         <div class="header">
-          <button class="back-btn" id="back-settings">← Back</button>
-          <span class="title">Settings</span>
+          <button class="back-btn" id="back-settings">← Back</button
+          ><span class="title">Settings</span>
         </div>
         <div class="settings-section-label">Keyboard Shortcut</div>
         <div class="shortcut-box">
